@@ -2,7 +2,12 @@
 // COMSC-210 - Ibrahim Alatig 
 
 #include <iostream>
+#include <string>
 using namespace std;
+
+int sum_ascii(const string& str) {
+    int sum = 0;
+    for (char c :
 
 
 int main() {
