@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -15,14 +16,14 @@ int sum_ascii(const string& str) {
 }
 
 int main() {
-    string test1 = "Hello";
-    string test2 = "World";
-    string test3 = "!";
+    ifstream infile("data.txt"); 
+    if (!infile) {
+        cerr << "Error opening file, Check the files name" << endl;
+        return 1;
+    }
 
-    cout << "Sum of ASCII values for '" << test1 << "': " << sum_ascii(test1) << endl; 
-    cout << "Sum of ASCII values for '" << test2 << "': " << sum_ascii(test2) << endl; 
-    cout << "Sum of ASCII values for '" << test3 << "': " << sum_ascii(test3) << endl; 
-    
+    string hexString;
+    long long 
 
     return 0;
 }
