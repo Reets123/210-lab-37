@@ -23,7 +23,17 @@ int main() {
     }
 
     string hexString;
-    long long 
+    long long grandTotal = 0; // Total sum of ASCII values
+
+    while (infile >> hexString) {
+        if (hexString.length() == 12) {
+            grandTotal += sum_ascii(hexString); 
+        }
+    }
+
+    infile.close(); 
+
+    cout << "Grand Total of ASCII values: " << grandTotal << endl;
 
     return 0;
 }
