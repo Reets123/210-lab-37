@@ -16,7 +16,7 @@ int sum_ascii(const string& str) {
 }
 
 int main() {
-    ifstream infile("data.txt"); 
+    ifstream infile("lab-37-data.txt"); 
     if (!infile) {
         cerr << "Error opening file, Check the files name" << endl;
         return 1;
