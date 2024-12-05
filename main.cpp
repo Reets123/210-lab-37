@@ -4,10 +4,12 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <map>
+#include <list>
 
 using namespace std;
 
-int sum_ascii(const string& str) {
+int gen_hash_index(const string& str) {
     int sum = 0;
     for (char c : str) {
         sum += (int)c; 
