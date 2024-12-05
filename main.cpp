@@ -14,7 +14,7 @@ int gen_hash_index(const string& str) {
     for (char c : str) {
         sum += (int)c; 
     }
-    return sum; 
+    return sum % 256; 
 }
 
 int main() {
@@ -27,9 +27,13 @@ int main() {
     string hexString;
     long long grandTotal = 0; // Total sum of ASCII values
 
+    map<int, list<string>> hash_table;
+
     while (infile >> hexString) {
         if (hexString.length() == 12) {
             grandTotal += sum_ascii(hexString); 
+            int hash_index = gen_hash_index(hexString);
+            hash_table[hash_index].push_back(hexString);
         }
     }
 
