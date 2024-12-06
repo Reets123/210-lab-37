@@ -49,7 +49,14 @@ int main() {
     for (const auto& entry : hash_table) {
         cout << "Hash Index: " << entry.first << " -> Codes: ";
         for (const auto& code : entry.second) {
-            cout << co
+            cout << code << " ";
+        }
+        cout << endl;
+
+        if (++count >= 100) {
+            break;  
+        }
+    }
 
     return 0;
 }
