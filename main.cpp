@@ -31,7 +31,7 @@ int main() {
 
     while (infile >> hexString) {
         if (hexString.length() == 12) {
-            grandTotal += sum_ascii(hexString); 
+            grandTotal += gen_hash_index(hexString); 
             int hash_index = gen_hash_index(hexString);
             hash_table[hash_index].push_back(hexString);
 
