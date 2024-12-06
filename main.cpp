@@ -34,12 +34,22 @@ int main() {
             grandTotal += sum_ascii(hexString); 
             int hash_index = gen_hash_index(hexString);
             hash_table[hash_index].push_back(hexString);
+
+            for (char c : hexString) {
+                grandTotal += (int)c;
+            }
         }
     }
 
     infile.close(); 
 
     cout << "Grand Total of ASCII values: " << grandTotal << endl;
+
+    int count = 0;
+    for (const auto& entry : hash_table) {
+        cout << "Hash Index: " << entry.first << " -> Codes: ";
+        for (const auto& code : entry.second) {
+            cout << co
 
     return 0;
 }
