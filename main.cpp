@@ -49,7 +49,21 @@ void search_key(const map<int, list<string>>& hash_table, int key) {
 
 void add_key(map<int, list<string>>& hash_table, int key, const string& code) {
     hash_table[key].push_back(code);
-    cout << "Added code: " << code << " at
+    cout << "Added code: " << code << " at Hash Index: " << key << endl;
+}
+
+void remove_key(map<int, list<string>>& hash_table, int key) {
+    auto it = hash_table.find(key);
+    if (it != hash_table.end()) {
+        hash_table.erase(it);
+        cout << "Removed entries at Hash Index: " << key << endl;
+    } else {
+        cout << "Key " << key << " not found." << endl;
+    }
+}
+
+void modify_key(map<int, list<string>>& hash_table, int key, const string& old_code, const string& new_code) {
+    auto it = hash_table.
 
 int main() {
     ifstream infile("lab-37-data.txt"); 
