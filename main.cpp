@@ -111,7 +111,26 @@ int main() {
         cout << "1. Print the first 100 entries\n";
         cout << "2. Search for a key\n";
         cout << "3. Add a key\n";
-        cout << "4. Remo
+        cout << "4. RemoRemove a key\n";
+        cout << "5. Modify a key\n";
+        cout << "6. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                display_first_100_entries(hash_table);
+                break;
+            case 2: {
+                int key;
+                cout << "Enter hash index to search: ";
+                cin >> key;
+                search_key(hash_table, key);
+                break;
+            }
+            case 3: {
+                int key;
+                string 
 
     return 0;
 }
