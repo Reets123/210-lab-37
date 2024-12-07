@@ -6,6 +6,7 @@
 #include <fstream>
 #include <map>
 #include <list>
+#include <algorithm>
 
 using namespace std;
 
@@ -16,6 +17,12 @@ int gen_hash_index(const string& str) {
     }
     return sum % 256; 
 }
+
+void display_first_100_entries(const map<int, list<string>>& hash_table) {
+    int count = 0;
+    for (const auto& entry : hash_table) {
+        cout << "Hash Index: " << entry.first << " -> Codes: ";
+        for (const
 
 int main() {
     ifstream infile("lab-37-data.txt"); 
