@@ -22,7 +22,16 @@ void display_first_100_entries(const map<int, list<string>>& hash_table) {
     int count = 0;
     for (const auto& entry : hash_table) {
         cout << "Hash Index: " << entry.first << " -> Codes: ";
-        for (const
+        for (constauto& code : entry.second) {
+            cout << code << " ";
+        }
+        cout << endl;
+
+        if (++count >= 100) {
+            break;  
+        }
+    }
+}
 
 int main() {
     ifstream infile("lab-37-data.txt"); 
