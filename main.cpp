@@ -1,4 +1,4 @@
-// Lab 37: Hash Table I
+// Lab 38: Hash Table II
 // COMSC-210 - Ibrahim Alatig 
 
 #include <iostream>
