@@ -151,7 +151,19 @@ int main() {
                 cout << "Enter hash index to modify: ";
                 cin >> key;
                 cout << "Enter the existing code to modify: ";
-                cin >> old_co
+                cin >> old_code;
+                cout << "Enter the new code: ";
+                cin >> new_code;
+                modify_key(hash_table, key, old_code, new_code);
+                break;
+            }
+            case 6:
+                cout << "Exiting program." << endl;
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
+        }
+    } while (choice != 6);
 
     return 0;
 }
