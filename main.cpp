@@ -18,11 +18,12 @@ int gen_hash_index(const string& str) {
     return sum % 256; 
 }
 
+// function to display 100 entries
 void display_first_100_entries(const map<int, list<string>>& hash_table) {
     int count = 0;
     for (const auto& entry : hash_table) {
         cout << "Hash Index: " << entry.first << " -> Codes: ";
-        for (constauto& code : entry.second) {
+        for (const auto& code : entry.second) {
             cout << code << " ";
         }
         cout << endl;
@@ -33,6 +34,7 @@ void display_first_100_entries(const map<int, list<string>>& hash_table) {
     }
 }
 
+// function to search a key
 void search_key(const map<int, list<string>>& hash_table, int key) {
     auto it = hash_table.find(key);
     if (it != hash_table.end()) {
@@ -46,12 +48,13 @@ void search_key(const map<int, list<string>>& hash_table, int key) {
     }
 }
 
-
+// function to add key
 void add_key(map<int, list<string>>& hash_table, int key, const string& code) {
     hash_table[key].push_back(code);
     cout << "Added code: " << code << " at Hash Index: " << key << endl;
 }
 
+// function to remove key
 void remove_key(map<int, list<string>>& hash_table, int key) {
     auto it = hash_table.find(key);
     if (it != hash_table.end()) {
@@ -62,6 +65,7 @@ void remove_key(map<int, list<string>>& hash_table, int key) {
     }
 }
 
+// function to modify key
 void modify_key(map<int, list<string>>& hash_table, int key, const string& old_code, const string& new_code) {
     auto it = hash_table.find(key);
     if (it != hash_table.end()) {
@@ -105,6 +109,7 @@ int main() {
 
     cout << "Grand Total of ASCII values: " << grandTotal << endl;
 
+    // Menu
     int choice;
     do {
         cout << "\nMenu:\n";
