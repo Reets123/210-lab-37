@@ -42,7 +42,14 @@ void search_key(const map<int, list<string>>& hash_table, int key) {
         }
         cout << endl;
     } else {
-        cout << "Key " <
+        cout << "Key " << key << " not found." << endl;
+    }
+}
+
+
+void add_key(map<int, list<string>>& hash_table, int key, const string& code) {
+    hash_table[key].push_back(code);
+    cout << "Added code: " << code << " at
 
 int main() {
     ifstream infile("lab-37-data.txt"); 
