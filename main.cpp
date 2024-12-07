@@ -105,18 +105,13 @@ int main() {
 
     cout << "Grand Total of ASCII values: " << grandTotal << endl;
 
-    int count = 0;
-    for (const auto& entry : hash_table) {
-        cout << "Hash Index: " << entry.first << " -> Codes: ";
-        for (const auto& code : entry.second) {
-            cout << code << " ";
-        }
-        cout << endl;
-
-        if (++count >= 100) {
-            break;  
-        }
-    }
+    int choice;
+    do {
+        cout << "\nMenu:\n";
+        cout << "1. Print the first 100 entries\n";
+        cout << "2. Search for a key\n";
+        cout << "3. Add a key\n";
+        cout << "4. Remo
 
     return 0;
 }
