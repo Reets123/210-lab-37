@@ -63,7 +63,20 @@ void remove_key(map<int, list<string>>& hash_table, int key) {
 }
 
 void modify_key(map<int, list<string>>& hash_table, int key, const string& old_code, const string& new_code) {
-    auto it = hash_table.
+    auto it = hash_table.find(key);
+    if (it != hash_table.end()) {
+        auto& code_list = it->second;
+        auto code_it = find(code_list.begin(), code_list.end(), old_code);
+        if (code_it != code_list.end()) {
+            *code_it = new_code; 
+            cout << "Modified code: " << old_code << " to " << new_code << " at Hash Index: " << key << endl;
+        } else {
+            cout << "Code " << old_code << " not found at Hash Index: " << key << endl;
+        }
+    } else {
+        cout << "Key " << key << " not found." << endl;
+    }
+}
 
 int main() {
     ifstream infile("lab-37-data.txt"); 
