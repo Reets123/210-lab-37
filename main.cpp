@@ -33,6 +33,17 @@ void display_first_100_entries(const map<int, list<string>>& hash_table) {
     }
 }
 
+void search_key(const map<int, list<string>>& hash_table, int key) {
+    auto it = hash_table.find(key);
+    if (it != hash_table.end()) {
+        cout << "Hash Index: " << key << " -> Codes: ";
+        for (const auto& code : it->second) {
+            cout << code << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "Key " <
+
 int main() {
     ifstream infile("lab-37-data.txt"); 
     if (!infile) {
