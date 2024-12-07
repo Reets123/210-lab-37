@@ -130,7 +130,28 @@ int main() {
             }
             case 3: {
                 int key;
-                string 
+                string  code;
+                cout << "Enter hash index to add to: ";
+                cin >> key;
+                cout << "Enter the code to add: ";
+                cin >> code;
+                add_key(hash_table, key, code);
+                break;
+            }
+            case 4: {
+                int key;
+                cout << "Enter hash index to remove: ";
+                cin >> key;
+                remove_key(hash_table, key);
+                break;
+            }
+            case 5: {
+                int key;
+                string old_code, new_code;
+                cout << "Enter hash index to modify: ";
+                cin >> key;
+                cout << "Enter the existing code to modify: ";
+                cin >> old_co
 
     return 0;
 }
