@@ -31,7 +31,6 @@ int main() {
 
     while (infile >> hexString) {
         if (hexString.length() == 12) {
-            grandTotal += gen_hash_index(hexString); 
             int hash_index = gen_hash_index(hexString);
             hash_table[hash_index].push_back(hexString);
 
@@ -60,11 +59,3 @@ int main() {
 
     return 0;
 }
-
-/* 
-These targets are present in the dataset and can be used for testing:
-536B9DFC93AF
-1DA9D64D02A0
-666D109AA22E
-E1D2665B21EA
-*/
